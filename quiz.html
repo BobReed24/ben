@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Necrotising Fasciitis Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script>
+        function calculateScore(event) {
+            event.preventDefault(); 
+            let score = 0;
+            const answers = {
+                q1: "q1a2",
+                q2: "q2a3",
+                q3: "q3a2",
+                q4: "q4a3",
+                q5: "q5a1",
+                q6: "q6a3",
+                q7: "q7a1",
+                q8: "q8a3",
+                q9: "q9a2",
+                q10: "q10a1"
+            };
+            for (let [question, answer] of Object.entries(answers)) {
+                if (document.getElementById(answer).checked) {
+                    score += 1;
+                }
+            }
+            document.getElementById("score").innerText = `Your score is: ${score}/10`;
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Necrotising Fasciitis</strong></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Necrotising FasciitisQuiz</h2>
+                    <h3>Test Your Knowledge on the bacterium Necrotising Fasciitis</h3>
+                </hgroup>
+                <p>Answer the questions below and submit to see your score!</p>
+
+                <form onsubmit="calculateScore(event)">
+                    <h3>Question 1: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q1" id="q1a1"><label for="q1a1">Wrong</label></li>
+                        <li><input type="radio" name="q1" id="q1a2"><label for="q1a2">Correct</label></li>
+                        <li><input type="radio" name="q1" id="q1a3"><label for="q1a3">Wrong</label></li>
+                    </ul>
+
+                    <h3>Question 2: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q2" id="q2a1"><label for="q2a1">Wrong</label></li>
+                        <li><input type="radio" name="q2" id="q2a2"><label for="q2a2">Wrong</label></li>
+                        <li><input type="radio" name="q2" id="q2a3"><label for="q2a3">Correct</label></li>
+                    </ul>
+
+                    <h3>Question 3: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q3" id="q3a1"><label for="q3a1">Wrong</label></li>
+                        <li><input type="radio" name="q3" id="q3a2"><label for="q3a2">Correct</label></li>
+                        <li><input type="radio" name="q3" id="q3a3"><label for="q3a3">Wrong</label></li>
+                    </ul>
+
+                    <h3>Question 4: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q4" id="q4a1"><label for="q4a1">Wrong</label></li>
+                        <li><input type="radio" name="q4" id="q4a2"><label for="q4a2">Wrong</label></li>
+                        <li><input type="radio" name="q4" id="q4a3"><label for="q4a3">Correct</label></li>
+                    </ul>
+
+                    <h3>Question 5: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q5" id="q5a1"><label for="q5a1">Correct</label></li>
+                        <li><input type="radio" name="q5" id="q5a2"><label for="q5a2">Wrong</label></li>
+                        <li><input type="radio" name="q5" id="q5a3"><label for="q5a3">Wrong</label></li>
+                    </ul>
+
+                    <h3>Question 6: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q6" id="q6a1"><label for="q6a1">Wrong</label></li>
+                        <li><input type="radio" name="q6" id="q6a2"><label for="q6a2">Wrong</label></li>
+                        <li><input type="radio" name="q6" id="q6a3"><label for="q6a3">Correct Base</label></li>
+                    </ul>
+
+                    <h3>Question 7: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q7" id="q7a1"><label for="q7a1">Correct</label></li>
+                        <li><input type="radio" name="q7" id="q7a2"><label for="q7a2">Wrong</label></li>
+                        <li><input type="radio" name="q7" id="q7a3"><label for="q7a3">Wrong</label></li>
+                    </ul>
+
+                    <h3>Question 8: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q8" id="q8a1"><label for="q8a1">Wrong</label></li>
+                        <li><input type="radio" name="q8" id="q8a2"><label for="q8a2">Wrong</label></li>
+                        <li><input type="radio" name="q8" id="q8a3"><label for="q8a3">Correct</label></li>
+                    </ul>
+
+                    <h3>Question 9: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q9" id="q9a1"><label for="q9a1">Wrong</label></li>
+                        <li><input type="radio" name="q9" id="q9a2"><label for="q9a2">Correct</label></li>
+                        <li><input type="radio" name="q9" id="q9a3"><label for="q9a3">Wrong</label></li>
+                    </ul>
+
+                    <h3>Question 10: enter here</h3>
+                    <ul>
+                        <li><input type="radio" name="q10" id="q10a1"><label for="q10a1">Correct</label></li>
+                        <li><input type="radio" name="q10" id="q10a2"><label for="q10a2">Wrong</label></li>
+                        <li><input type="radio" name="q10" id="q10a3"><label for="q10a3">Wrong</label></li>
+                    </ul>
+                    <input type="submit" value="Submit">
+                </form>
+
+                <p id="score"></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
